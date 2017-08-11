@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-// Make a component
+// Make a components
 const Header = ({ headerText }) => {
   const { textStyle, viewStyle } = styles;
 
@@ -31,6 +31,5 @@ const Header = ({ headerText }) => {
   );
 };
 
-
-// Export component
-export default Header;
+// Export components
+export { Header };
