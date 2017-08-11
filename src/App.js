@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 
 import { Header } from './components/common';
+import LoginForm from './components/LoginForm';
+
 
 class App extends Component {
-  render() {
-    return (
-      <View>
-        <Header headerText="Coucou" />
-        <Text>Coucou</Text>
-      </View>
-    );
-  }
-
   // Lifecycle methods
+
   componentWillMount() {
     // Initialize firebase
     firebase.initializeApp({
@@ -25,6 +19,15 @@ class App extends Component {
       storageBucket: 'auth-afa4f.appspot.com',
       messagingSenderId: '414189996447',
     });
+  }
+
+  render() {
+    return (
+      <View>
+        <Header headerText="Coucou" />
+        <LoginForm>Coucou</LoginForm>
+      </View>
+    );
   }
 }
 
